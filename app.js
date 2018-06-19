@@ -2,7 +2,7 @@
 var name = window.prompt('Hello, Please enter your name');
 var greeting = document.getElementById('greeting');
 
-greeting.innerHTML += ', ' + name.toUpperCase(0);
+greeting.innerHTML += ', ' + name.toUpperCase();
 
 var enterDays = document.getElementById('enterDays');
 enterDays.onclick = calculateDays;
@@ -21,8 +21,8 @@ function calculateDays() {
   }
 
   var hours = days * 24;
-  var minutes = days * 60;
-  var seconds = days * 60;
+  var minutes = hours * 1440;
+  var seconds = minutes * 86400;
 
   var hoursMessage = document.getElementById('hoursMessage');
   var minutesMessage = document.getElementById('minutesMessage');
@@ -42,5 +42,31 @@ function calculateDays() {
 
   timingNext.onclick = function() {
     document.getElementById('budgetSection').removeAttribute('hidden');
+  };
+
+  document.getElementById('enterBudget').onclick = function() {
+    var tripBudgetInput = document.getElementById('tripBudget');
+    var budgetValue = tripBudgetInput.value;
+
+    var actualBudget = budgetValue * 1.45;
+
+    var tripExchangeMsg = document.getElementById('tripExchangeMsg');
+    tripExchangeMsg.innerHTML =
+      "That means you'll need " + '$' + actualBudget + ' NZD for your trip';
+
+    var budgetPerDay = actualBudget / days;
+    var dailyExchangeMsg = document.getElementById('dailyExchangeMsg');
+    dailyExchangeMsg.innerHTML =
+      'That means you can spend ' + '$' + budgetPerDay + ' NZD per day.';
+
+    var change10 = 10 * 1.45;
+    var exchange10 = document.getElementById('exchange10Msg');
+    exchange10.innerHTML =
+      "You'll need $" + change10 + ' for an item that would cost you $10 NZD';
+
+    var change500 = 500 * 1.45;
+    var exchange500 = document.getElementById('exchange500Msg');
+    exchange500.innerHTML =
+      "You'll need $" + change500 + ' for an item that would cost you $500 NZD';
   };
 }
