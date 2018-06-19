@@ -1,6 +1,9 @@
+html {
+  height: 100vh;
+}
 body {
   background: linear-gradient(rgba(14, 33, 180, 0.1), rgba(14, 33, 180, 0.1)),
-    url('img/bgimage.jpg');
+    url('./img/bgimage.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Lora', serif;
