@@ -62,11 +62,13 @@ function calculateDays() {
     var change10 = 10 * 1.45;
     var exchange10 = document.getElementById('exchange10Msg');
     exchange10.innerHTML =
-      "You'll need $" + change10 + ' for an item that would cost you $10 NZD';
+      "You'll need $" + change10 + 'NZD for an item that would cost you $10USD';
 
     var change500 = 500 * 1.45;
     var exchange500 = document.getElementById('exchange500Msg');
     exchange500.innerHTML =
-      "You'll need $" + change500 + ' for an item that would cost you $500 NZD';
+      "You'll need $" +
+      change500 +
+      'NZD for an item that would cost you $500USD';
   };
 }
