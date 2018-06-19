@@ -1,0 +1,59 @@
+html {
+  height: 100%;
+}
+body {
+  background: linear-gradient(rgba(14, 33, 180, 0.1), rgba(14, 33, 180, 0.1)),
+    url('../img/bgimage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Lora', serif;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px auto;
+}
+
+form label {
+  display: inline;
+}
+h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+  text-shadow: 2px 2px #555;
+}
+
+strong {
+  color: yellow;
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 80%;
+  margin: 5px auto;
+  color: #fff;
+  clear: right;
+  overflow: auto;
+}
+
+section h2 {
+  color: #fff;
+}
+
+.error {
+  color: red;
+}
+
+input {
+  text-align: center;
+}
+
+.next {
+  background-color: white;
+  color: green;
+  border: 3px dotted;
+  width: 10%;
+  float: right;
+  margin: 5px 10px;
+}
