@@ -3,19 +3,19 @@
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url('img/bgimage.jpg');
+  background: url('img/bgimage.jpg');
+  height: 100vh;
   transition: 5.3s;
   background-size: 100% 100%;
+  background-position: center;
   background-repeat: no-repeat;
-  font-family: 'Lora', serif;
-  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
 #logo,
 #logo2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   color: #555;
   text-decoration: none;
   text-transform: uppercase;
@@ -30,7 +30,7 @@ body {
 #logo:after {
   content: 'New';
   position: absolute;
-  left: 13px;
+  left: 10px;
   top: 32px;
 }
 
@@ -47,11 +47,11 @@ body {
     left top,
     transparent 0%,
     transparent 25%,
-    #555 25%,
-    #555 50%,
+    #fff 25%,
+    #fff 50%,
     transparent 50%,
     transparent 75%,
-    #555 75%
+    #fff 75%
   );
   background-size: 4px 4px;
   -webkit-background-clip: text;
@@ -80,11 +80,11 @@ strong {
 }
 
 section {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 80%;
   margin: 5px auto;
+  padding: 10px 20px;
   color: #fff;
-  clear: right;
 }
 
 section h2 {
@@ -97,13 +97,22 @@ section h2 {
 
 input {
   text-align: center;
+  font-size: 22px;
+  padding: 12px 24px;
 }
 
-.next {
-  background-color: white;
-  color: green;
-  border: 3px dotted;
-  width: 10%;
-  float: right;
-  margin: 5px 10px;
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
+  background: rgba(0, 0, 0, 1.19);
+}
+
+.button {
+  background: #555;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 12px 24px;
+  transition: all 0.3s;
 }
