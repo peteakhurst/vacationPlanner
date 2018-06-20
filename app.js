@@ -91,6 +91,7 @@ function changeImage() {
   currentImage++;
   if (currentImage > images.length - 1) {
     currentImage = 0;
+    images.addClass('transition');
   }
   document.body.style.backgroundImage = 'url(' + images[currentImage] + ')';
 }

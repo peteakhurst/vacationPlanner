@@ -5,11 +5,16 @@
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('img/bgimage.jpg');
+  /* transition: 1.3s; */
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Lora', serif;
-  height: 100vh;
+  height: auto;
   text-align: center;
+}
+
+.transition {
+  transition: 5.2s;
 }
 
 label {
