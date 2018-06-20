@@ -72,3 +72,25 @@ function calculateDays() {
       'NZD for an item that would cost you $500USD';
   };
 }
+
+// backgroundimage gallery
+
+var images = [
+  'img/bgimage.jpg',
+  'img/bgimage1.jpg',
+  'img/bgimage2.jpg',
+  'img/bgimage3.jpg',
+  'img/bgimage4.jpg',
+  'img/bgimage5.jpg'
+];
+var currentImage = 0;
+
+setInterval(changeImage, 3000);
+
+function changeImage() {
+  currentImage++;
+  if (currentImage > images.length - 1) {
+    currentImage = 0;
+  }
+  document.body.style.backgroundImage = 'url(' + images[currentImage] + ')';
+}
