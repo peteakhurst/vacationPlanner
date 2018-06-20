@@ -85,13 +85,12 @@ var images = [
 ];
 var currentImage = 0;
 
-setInterval(changeImage, 3000);
+setInterval(changeImage, 8000);
 
 function changeImage() {
   currentImage++;
   if (currentImage > images.length - 1) {
     currentImage = 0;
-    images.addClass('transition');
   }
   document.body.style.backgroundImage = 'url(' + images[currentImage] + ')';
 }

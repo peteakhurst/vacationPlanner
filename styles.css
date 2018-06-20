@@ -5,16 +5,60 @@
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('img/bgimage.jpg');
-  /* transition: 1.3s; */
-  background-size: cover;
+  transition: 5.3s;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   font-family: 'Lora', serif;
-  height: auto;
+  height: 100vh;
   text-align: center;
 }
 
-.transition {
-  transition: 5.2s;
+#logo,
+#logo2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 150px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-shadow: #ededed 3px 2px 0;
+  position: relative;
+}
+
+#logo:after {
+  content: 'New';
+  position: absolute;
+  left: 13px;
+  top: 32px;
+}
+
+#logo2:after {
+  content: 'Zealand';
+  position: absolute;
+  left: 10px;
+  top: 32px;
+}
+#logo:after,
+#logo2:after {
+  /*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
+  background-image: -webkit-linear-gradient(
+    left top,
+    transparent 0%,
+    transparent 25%,
+    #555 25%,
+    #555 50%,
+    transparent 50%,
+    transparent 75%,
+    #555 75%
+  );
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -5;
+  display: block;
+  text-shadow: none;
 }
 
 label {
